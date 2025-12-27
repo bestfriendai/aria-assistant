@@ -1,0 +1,69 @@
+# Xcode
+*.xcodeproj/
+*.xcworkspace/
+xcuserdata/
+*.xcuserstate
+*.xccheckout
+*.xcscmblueprint
+
+# Build
+build/
+DerivedData/
+*.build/
+.swiftpm/
+.build/
+
+# SPM
+Package.resolved
+
+# CocoaPods
+Pods/
+Podfile.lock
+
+# Carthage
+Carthage/Build/
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE
+*.swp
+*.swo
+*~
+.idea/
+*.iml
+.vscode/
+
+# Secrets (never commit these!)
+*.env
+.env.local
+.env.*.local
+secrets.plist
+GoogleService-Info.plist
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+
+# Archives
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# Debug
+*.hprof
+
+# Local configuration
+*.local
