@@ -29,11 +29,24 @@ class AttentionEngine: ObservableObject {
     func start() async {
         // Initialize sources
         sources = [
+            // Core Sources
             EmailAttentionSource(),
             CalendarAttentionSource(),
             TaskAttentionSource(),
             BankingAttentionSource(),
-            ShoppingAttentionSource()
+            ShoppingAttentionSource(),
+
+            // New Sources
+            PackageAttentionSource(),
+            TravelAttentionSource(),
+            SmartHomeAttentionSource(),
+            WeatherAttentionSource(),
+            HealthAttentionSource(),
+            WorkCommsAttentionSource(),
+            ReservationAttentionSource(),
+            ParkingAttentionSource(),
+            SubscriptionAttentionSource(),
+            ReminderAttentionSource()
         ]
 
         // Initial refresh
@@ -178,6 +191,96 @@ class BankingAttentionSource: AttentionSource {
 class ShoppingAttentionSource: AttentionSource {
     func getItems() async -> [AttentionItem] {
         // Fetch delivery updates
+        return []
+    }
+}
+
+// MARK: - Package Attention Source
+
+class PackageAttentionSource: AttentionSource {
+    func getItems() async -> [AttentionItem] {
+        // Fetch packages out for delivery or arriving today
+        return []
+    }
+}
+
+// MARK: - Travel Attention Source
+
+class TravelAttentionSource: AttentionSource {
+    func getItems() async -> [AttentionItem] {
+        // Fetch upcoming flights, gate changes, delays
+        return []
+    }
+}
+
+// MARK: - Smart Home Attention Source
+
+class SmartHomeAttentionSource: AttentionSource {
+    func getItems() async -> [AttentionItem] {
+        // Fetch security alerts, doors left unlocked, etc.
+        return []
+    }
+}
+
+// MARK: - Weather Attention Source
+
+class WeatherAttentionSource: AttentionSource {
+    func getItems() async -> [AttentionItem] {
+        // Fetch weather alerts, rain warnings
+        return []
+    }
+}
+
+// MARK: - Health Attention Source
+
+class HealthAttentionSource: AttentionSource {
+    func getItems() async -> [AttentionItem] {
+        // Fetch medication reminders, health alerts
+        return []
+    }
+}
+
+// MARK: - Work Communications Attention Source
+
+class WorkCommsAttentionSource: AttentionSource {
+    func getItems() async -> [AttentionItem] {
+        // Fetch urgent Slack/Teams messages, mentions
+        return []
+    }
+}
+
+// MARK: - Reservation Attention Source
+
+class ReservationAttentionSource: AttentionSource {
+    func getItems() async -> [AttentionItem] {
+        // Fetch upcoming reservations
+        return []
+    }
+}
+
+// MARK: - Parking Attention Source
+
+class ParkingAttentionSource: AttentionSource {
+    func getItems() async -> [AttentionItem] {
+        // Fetch parking expiring soon
+        return []
+    }
+}
+
+// MARK: - Subscription Attention Source
+
+class SubscriptionAttentionSource: AttentionSource {
+    func getItems() async -> [AttentionItem] {
+        // Fetch trial endings, renewal reminders
+        return []
+    }
+}
+
+// MARK: - Reminder Attention Source
+
+class ReminderAttentionSource: AttentionSource {
+    func getItems() async -> [AttentionItem] {
+        // Fetch due reminders from iOS Reminders
         return []
     }
 }
